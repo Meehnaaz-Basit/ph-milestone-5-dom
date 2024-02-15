@@ -13,11 +13,16 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
-    <header></header>
-    <main>
+    <header class="bg-[#8acef5] text-center p-4 m-5">
+      <p class="text-3xl font-bold">Interactive</p>
+      <p class="text-xl">Geometry Genius</p>
+    </header>
+    <main class="mx-4">
       <div class="flex justify-between mt-5">
         <!-- shape content -->
-        <div class="all-shapes flex-1 grid lg:grid-cols-3 gap-5 p-5">
+        <div
+          class="all-shapes flex-1 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5 p-5"
+        >
           <!-- triangle -->
           <div class="card bg-base-100 shadow-xl pt-5">
             <figure>
@@ -284,9 +289,12 @@
           <!-- ellipse ends -->
         </div>
         <!-- area calculation -->
-        <div class="calculation-space lg:w-96 bg-red-600">
+
+        <!-- <div class="calculation-space lg:w-96 border-2 rounded">
           <h3 class="text-3xl text-center">Area Calculation</h3>
-        </div>
+        </div> -->
+
+        <!-- area calculation ends -->
       </div>
     </main>
     <footer></footer>
