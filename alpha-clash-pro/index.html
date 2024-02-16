@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,12 +11,142 @@
       type="text/css"
     />
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
     <!-- custom css -->
     <link rel="stylesheet" href="custom.css" />
   </head>
   <body>
-    <section class="home"></section>
-    <section class="play-ground"></section>
-    <section class="score"></section>
+    <main
+      class="bg-[#010313] bg-[url(images/background.png)] bg-no-repeat bg-top min-h-screen font-poppins"
+    >
+      <!--========= home =========-->
+      <section
+        id="home-section"
+        class="home flex flex-col text-center min-h-screen items-center justify-center leading-snug"
+      >
+        <div class="text-white">
+          <h1 class="font-anton uppercase text-[170px]">alphabet clash</h1>
+          <p class="font-medium text-2xl capitalize">
+            Unleash Your Keyboard Kung Fu : Press “Enter” to Play
+          </p>
+          <button
+            onclick="addPlay()"
+            class="btn bg-white text-black capitalize font-semibold text-xl mt-6"
+          >
+            play now
+          </button>
+        </div>
+      </section>
+      <!--======== playground ========-->
+      <section
+        id="playground-section"
+        class="play-ground flex flex-col text-center min-h-screen justify-center items-center hidden"
+      >
+        <div class="playgroung-container space-y-10">
+          <!-- screen -->
+          <div class="play-screen">
+            <div
+              class="artboard artboard-horizontal phone-6 bg-white/[.7] border-[20px] border-black/[.8] rounded-2xl"
+            >
+              <div class="flex justify-center">
+                <p class="bg-[#2F2941] text-white px-6 pb-2 rounded-b-xl">
+                  Don't watch keyboard while playing...
+                </p>
+              </div>
+              <div class="flex justify-center items-center h-full">
+                <p
+                  id="screen-alphabet"
+                  class="text-black text-9xl font-bold uppercase"
+                >
+                  y
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- keyboard -->
+          <div class="play-keyboard">
+            <div class="flex justify-center gap-1 my-1 w-full">
+              <kbd id="w" class="kbd">w</kbd>
+              <kbd id="q" class="kbd">q</kbd>
+              <kbd id="e" class="kbd">e</kbd>
+              <kbd id="r" class="kbd">r</kbd>
+              <kbd id="t" class="kbd">t</kbd>
+              <kbd id="y" class="kbd">y</kbd>
+              <kbd id="u" class="kbd">u</kbd>
+              <kbd id="i" class="kbd">i</kbd>
+              <kbd id="o" class="kbd">o</kbd>
+              <kbd id="p" class="kbd">p</kbd>
+            </div>
+            <div class="flex justify-center gap-1 my-1 w-full">
+              <kbd id="a" class="kbd">a</kbd>
+              <kbd id="s" class="kbd">s</kbd>
+              <kbd id="d" class="kbd">d</kbd>
+              <kbd id="f" class="kbd">f</kbd>
+              <kbd id="g" class="kbd">g</kbd>
+              <kbd id="h" class="kbd">h</kbd>
+              <kbd id="j" class="kbd">j</kbd>
+              <kbd id="k" class="kbd">k</kbd>
+              <kbd id="l" class="kbd">l</kbd>
+            </div>
+            <div class="flex justify-center gap-1 my-1 w-full">
+              <kbd id="z" class="kbd">z</kbd>
+              <kbd id="x" class="kbd">x</kbd>
+              <kbd id="c" class="kbd">c</kbd>
+              <kbd id="v" class="kbd">v</kbd>
+              <kbd id="b" class="kbd">b</kbd>
+              <kbd id="n" class="kbd">n</kbd>
+              <kbd id="m" class="kbd">m</kbd>
+              <kbd id="/" class="kbd">/</kbd>
+            </div>
+          </div>
+          <!-- life score -->
+          <div class="play-life-score">
+            <div class="score-buttons flex justify-between">
+              <div class="">
+                <button
+                  class="btn rounded-full bg-[#894189] text-white border-0 text-xl px-6"
+                >
+                  Life
+                  <img src="images/heart.svg" alt="" />
+                  <span>1</span>
+                </button>
+              </div>
+              <div class="">
+                <button
+                  class="btn rounded-full bg-[#360490] text-white border-0 text-xl px-6"
+                >
+                  Score
+                  <img src="images/dollar.svg" alt="" />
+                  <span>1</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- playground ends -->
+      <!--========= final score ========-->
+      <section
+        class="score flex flex-col text-center min-h-screen justify-center items-center hidden"
+      >
+        <div
+          class="text-white space-y-6 bg-gradient-to-r from-white/[.56] to-[#989797]/[0] border border-[#989797a0] p-8 rounded-2xl"
+        >
+          <h1 class="text-7xl font-bold">
+            Score: <span class="font-medium">14</span>
+          </h1>
+          <button class="btn bg-white text-black text-xl">Play Again</button>
+          <p class="font-medium text-xl">Practice will make you Pro</p>
+        </div>
+      </section>
+    </main>
+    <script src="js/utility.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
