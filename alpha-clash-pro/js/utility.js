@@ -10,7 +10,12 @@ function removeHiddenClass(elementId) {
 
 function setBgKeyBoardColor(elementId) {
   const element = document.getElementById(elementId);
-  element.style.backgroundColor = "#FFA500";
+  element.classList.add("bg-[#FFA500]");
+}
+
+function removeBgKeyBoardColor(elementId) {
+  const element = document.getElementById(elementId);
+  element.classList.remove("bg-[#FFA500]");
 }
 
 function getRandomAlphabet() {
@@ -24,4 +29,16 @@ function getRandomAlphabet() {
   const alphabet = alphabetArray[randomRoundNumber];
   // console.log(alphabetArray, alphabet);
   return alphabet;
+}
+
+function gamePointUpdate(eventId) {
+  const event = document.getElementById(eventId);
+  const eventText = event.innerText;
+  const eventTextNum = parseInt(eventText);
+  return eventTextNum;
+}
+
+function setElementValueById(elementId, value) {
+  const element = document.getElementById(elementId);
+  element.innerText = value;
 }

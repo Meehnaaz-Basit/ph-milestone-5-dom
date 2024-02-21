@@ -72,8 +72,8 @@
           <!-- keyboard -->
           <div class="play-keyboard">
             <div class="flex justify-center gap-1 my-1 w-full">
-              <kbd id="w" class="kbd">w</kbd>
               <kbd id="q" class="kbd">q</kbd>
+              <kbd id="w" class="kbd">w</kbd>
               <kbd id="e" class="kbd">e</kbd>
               <kbd id="r" class="kbd">r</kbd>
               <kbd id="t" class="kbd">t</kbd>
@@ -114,7 +114,7 @@
                 >
                   Life
                   <img src="images/heart.svg" alt="" />
-                  <span>1</span>
+                  <span id="game-life">5</span>
                 </button>
               </div>
               <div class="">
@@ -123,7 +123,7 @@
                 >
                   Score
                   <img src="images/dollar.svg" alt="" />
-                  <span>1</span>
+                  <span id="game-score">0</span>
                 </button>
               </div>
             </div>
@@ -133,15 +133,19 @@
       <!-- playground ends -->
       <!--========= final score ========-->
       <section
+        id="final-score-section"
         class="score flex flex-col text-center min-h-screen justify-center items-center hidden"
       >
         <div
           class="text-white space-y-6 bg-gradient-to-r from-white/[.56] to-[#989797]/[0] border border-[#989797a0] p-8 rounded-2xl"
         >
+          <h3 class="text-3xl">Game Over !</h3>
           <h1 class="text-7xl font-bold">
-            Score: <span class="font-medium">14</span>
+            Score: <span id="last-score" class="font-medium">14</span>
           </h1>
-          <button class="btn bg-white text-black text-xl">Play Again</button>
+          <button onclick="addPlay()" class="btn bg-white text-black text-xl">
+            Play Again
+          </button>
           <p class="font-medium text-xl">Practice will make you Pro</p>
         </div>
       </section>
